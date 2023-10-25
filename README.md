@@ -41,9 +41,9 @@ This is an example of the ``records`` JSON.
 
 These collections are related on ``artists.artistid`` = ``records.artistid``. I know this is redundent and that I could have joined these on the ``artist`` field in each collection.
 
-I also could have joined the two collections together into one collection but I am keeping the data in a similar format to the SQL Server version of the database.
+I also could have joined the two collections together into one collection but I am keeping the data in a similar format to the SQL Server version of the database. For this version of the data I'm not interested in NoSQL MongoDB.
 
-I am building a number of routines using Python to consume data for the database.
+I am building a number of routines using Python to consume data from the database.
 
 ## dependencies
 
