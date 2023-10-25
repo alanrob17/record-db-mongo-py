@@ -1,4 +1,4 @@
-import pymongo
+from pymongo import MongoClient
 
 
 def updateDoc(client, condition, operation):
@@ -9,7 +9,7 @@ def updateDoc(client, condition, operation):
     print(results.modified_count)
 
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
 condition = {"name": {"$eq": "I Can't Make You Love Me (ep)"}}
 operation = {"$set": {"name": "I Can't Make You Love Me (EP)"}}

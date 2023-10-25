@@ -1,10 +1,10 @@
-import pymongo
+from pymongo import MongoClient
 
 """
 Search for albums by Year using a dictionary.
 """
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
 db = client["record-db"]
 

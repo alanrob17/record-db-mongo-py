@@ -1,4 +1,4 @@
-import pymongo
+from pymongo import MongoClient
 
 
 def deleteDocument(client, condition):
@@ -9,8 +9,8 @@ def deleteDocument(client, condition):
     print(results.deleted_count)
 
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
-condition = {"id": {"$eq": 21}}
+condition = {"id": {"$eq": 28}}
 
 deleteDocument(client, condition)

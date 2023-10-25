@@ -1,10 +1,10 @@
-import pymongo
+from pymongo import MongoClient, ASCENDING
 
 """
 Search for albums by Year.
 """
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
 db = client["record-db"]
 
@@ -17,7 +17,7 @@ artist_ids = list({record["artistid"] for record in records_by_year})
 artists_in_year = db["artists"].find({"artistid": {"$in": artist_ids}})
 
 artists_in_year = artists_in_year.sort(
-    [("lastname", pymongo.ASCENDING), ("firstname", pymongo.ASCENDING)]
+    [("lastname", ASCENDING), ("firstname", ASCENDING)]
 )
 
 print(f"\nAlbums by year: {recorded_year}\n")

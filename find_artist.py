@@ -1,10 +1,10 @@
-import pymongo
+from pymongo import MongoClient, DESCENDING
 
 """
 Search for an Artist and their Albums.
 """
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
 db = client["record-db"]
 
@@ -20,9 +20,7 @@ else:
 
 if artistid is not None:
     records = (
-        db["records"]
-        .find({"artistid": artistid})
-        .sort([("recorded", pymongo.DESCENDING)])
+        db["records"].find({"artistid": artistid}).sort([("recorded", DESCENDING)])
     )
 
     album_names = [

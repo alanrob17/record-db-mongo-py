@@ -1,10 +1,10 @@
-import pymongo
+from pymongo import MongoClient, ASCENDING
 
 """
 Search for all ratings in the records collection
 """
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
 db = client["record-db"]
 
@@ -17,7 +17,7 @@ artist_ids = list({record["artistid"] for record in records_by_rating})
 artists_in_rating = db["artists"].find({"artistid": {"$in": artist_ids}})
 
 artists_in_rating = artists_in_rating.sort(
-    [("lastname", pymongo.ASCENDING), ("firstname", pymongo.ASCENDING)]
+    [("lastname", ASCENDING), ("firstname", ASCENDING)]
 )
 
 print(f"\nAlbums by rating: {my_rating}\n")
@@ -30,7 +30,7 @@ for artist in artists_in_rating:
         {"rating": my_rating, "artistid": artist["artistid"]}
     )
 
-    records_by_rating = records_by_rating.sort([("recorded", pymongo.ASCENDING)])
+    records_by_rating = records_by_rating.sort([("recorded", ASCENDING)])
 
     for record in records_by_rating:
         print(f"\t\t{record['recorded']} - {record['name']} ({record['media']})")

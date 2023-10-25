@@ -1,4 +1,4 @@
-import pymongo
+from pymongo import MongoClient
 
 """
 CRUD routines in MongoDB
@@ -36,7 +36,7 @@ def deleteDocument(client, condition):
     print(results.deleted_count)
 
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017")
 
 documents = [
     {"id": 11, "item": "Americanos", "size": "Short", "quantity": 22},
