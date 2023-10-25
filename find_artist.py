@@ -1,5 +1,9 @@
 import pymongo
 
+"""
+Search for an Artist and their Albums.
+"""
+
 client = pymongo.MongoClient("mongodb://localhost:27017")
 
 db = client["record-db"]
