@@ -21,6 +21,7 @@ for record in records_by_year:
 
     if artist_name not in artist_records_dict:
         artist_records_dict[artist_name] = []
+
     artist_records_dict[artist_name].append(
         {"name": record["name"], "media": record["media"]}
     )
@@ -28,7 +29,7 @@ for record in records_by_year:
 print(f"\nArtists with albums recorded in {recorded_year}:\n")
 
 for artist_name in artist_records_dict:
-    print(f"\t{artist_name}:")
+    print(f"\n\t{artist_name}:")
     artist_records = artist_records_dict[artist_name]
 
     if artist_records:
