@@ -45,6 +45,24 @@ I also could have joined the two collections together into one collection but I 
 
 I am building a number of routines using Python to consume data from the database.
 
+## Usage
+
+### main.py
+
+Contains all of the function calls. Most of these calls are commented out so if you want to run a function you will have to uncomment it.
+
+### artist_test.py and record_test.py
+
+These programs contain the test functions that call the MongoDB database and return data to the function. The results are printed to the screen
+
+``artist_test`` calls the the **artists** collection to return data.
+
+``record_test`` calls the the **records** collection to return data. It also joins with the **artists** collection to return artist and record data.
+
+### artist_db.py and record_db.py
+
+Contain the database functions that are required to send data back to the **test** functions.
+
 ## dependencies
 
 ```bash

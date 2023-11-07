@@ -75,7 +75,7 @@ def DeleteArtist(artistid: int) -> int:
     print(f"Number of documents deleted: {affected}.")
 
 
-def GetArtistByName(name: str) -> tuple:
+def GetArtistByName(name: str):
     artist = a.GetArtistByName(name)
 
     if artist:
