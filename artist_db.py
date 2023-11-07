@@ -18,7 +18,7 @@ def GetAllArtists():
     return artists
 
 
-def GetArtistByName(artistName: str):
+def GetArtistByName(artistName: str) -> tuple:
     artist = None
 
     try:
@@ -110,6 +110,24 @@ def UpdateArtist(query, newValues):
 
         if result:
             affected = result.modified_count
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return affected
+
+
+def DeleteArtist(query: str) -> int:
+    affected = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        result = db["artists"].delete_one(query)
+
+        if result:
+            affected = result.deleted_count
 
     except Exception as e:
         print(f"An error occurred: {e}")

@@ -7,15 +7,16 @@ import record_test as rt
 
 # at.CreateArtist()
 
-artistid = 823
-at.UpdateArtist(artistid)
+# artistid = 823
+# at.UpdateArtist(artistid)
 
-# at.GetArtistByName("Bob Dylan")
+# artistid = 823
+# at.DeleteArtist(artistid)
 
+name = "Bob Dylan"
+at.GetArtistByName(name)
 
 # at.GetArtistById(114)
-
-# at.DeleteArtist(838)
 
 # at.GetBiography(114)
 

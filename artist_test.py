@@ -65,3 +65,18 @@ def UpdateArtist(artistid: int):
         print(f"Number of documents updated: {affected}.")
     else:
         print(f"Artist with Id: {artistid} doesn't exist!")
+
+
+def DeleteArtist(artistid: int) -> int:
+    query = {"artistid": artistid}
+
+    affected = a.DeleteArtist(query)
+
+    print(f"Number of documents deleted: {affected}.")
+
+
+def GetArtistByName(name: str) -> tuple:
+    artist = a.GetArtistByName(name)
+
+    if artist:
+        print(f"{artist['artistid']}: {artist['firstname']} {artist['lastname']}")
