@@ -80,3 +80,54 @@ def GetArtistByName(name: str):
 
     if artist:
         print(f"{artist['artistid']}: {artist['firstname']} {artist['lastname']}")
+
+
+def GetArtistById(artistid: int):
+    artist = a.GetArtistById(artistid)
+
+    if artist:
+        biography = artist["biography"]
+        bio = biography if len(biography) < 60 else biography[:60] + "..."
+
+        print(
+            f"{artist['artistid']}: {artist['firstname']} - {artist['lastname']} - {artist['name']}\n\t{bio}"
+        )
+
+
+def GetBiography(artistid: int):
+    biography = a.GetBiography(artistid)
+
+    if biography:
+        print(biography)
+
+
+def ArtistHtml(artistid: int):
+    artist = a.GetArtistById(artistid)
+
+    if artist:
+        biography = artist["biography"]
+        bio = biography if len(biography) < 60 else biography[:60] + "..."
+        htmlCode = f"<p><strong>Id:</strong> {artist['artistid']}</p>\n<p><strong>Name:</strong> {artist['firstname']} {artist['lastname']}</p>\n<p><strong>Biography:</strong></p>\n<div>{artist['biography']}</p></div>"
+
+        print(htmlCode)
+
+
+def GetArtistId(firstName: str, lastName: str):
+    artistid = a.GetArtistIdByNames(firstName, lastName)
+
+    if artistid:
+        print(f"{artistid}: {firstName} {lastName}")
+
+
+def GetArtistsWithNoBio():
+    artists = a.GetArtistsWithNoBio()
+
+    for artist in artists:
+        print(f"Id: {artist['artistid']}, Name: {artist['name']}")
+
+
+def GetNoBiographyCount():
+    count = a.GetNoBiographyCount()
+
+    if count:
+        print(f"The number of Artists that have no Biography: {count}")

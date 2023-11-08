@@ -13,16 +13,21 @@ import record_test as rt
 # artistid = 823
 # at.DeleteArtist(artistid)
 
-name = "Bob Dylan"
-at.GetArtistByName(name)
+# name = "Bob Dylan"
+# at.GetArtistByName(name)
 
-# at.GetArtistById(114)
+# artistid = 114
+# at.GetArtistById(artistid)
 
-# at.GetBiography(114)
+# artistid = 114
+# at.GetBiography(artistid)
 
-# at.ArtistHtml(114)
+# artistid = 114
+# at.ArtistHtml(artistid)
 
-# at.GetArtistId("Bob", "Dylan")
+# firstName = "Bob"
+# lastName = "Dylan"
+# at.GetArtistId(firstName, lastName)
 
 # at.GetArtistsWithNoBio()
 
@@ -30,10 +35,13 @@ at.GetArtistByName(name)
 
 # -- Record Methods --
 
-# rt.searchAllArtistsAndAlbums()
+# rt.GetAllArtistsAndAlbums()
 
 # artist = "Bob Dylan"
 # rt.GetArtistAndAlbums(artist)
+
+year = 1975
+rt.GetRecordsByYear(year)
 
 # rt.GetAllRecords()
 
@@ -49,11 +57,6 @@ at.GetArtistByName(name)
 
 # rt.GetRecordsByArtistId(114)
 
-# rt.GetArtistRecordsMultipleTables()
-
-# rt.GetRecordsByArtistIdMultipleTables(114)
-
-# rt.GetRecordsByYear(1974)
 
 # rt.GetTotalNumberOfCDs()
 
