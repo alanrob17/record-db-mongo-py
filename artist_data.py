@@ -7,16 +7,9 @@ def GetNewArtistId(artistIdList: list) -> int:
 
 
 def CreateDictionaryList(artists: list[dict[str, str]]) -> list[dict[str, str]]:
-    artistList = [
-        {
-            "artistid": artist["artistid"],
-            "firstname": artist["firstname"],
-            "lastname": artist["lastname"],
-            "name": artist["name"],
-            "biography": artist["biography"],
-        }
-        for artist in artists
-    ]
+    artistList = []
+    for artist in artists:
+        artistList.append(artist)
 
     return artistList
 

@@ -40,8 +40,12 @@ import record_test as rt
 # artist = "Bob Dylan"
 # rt.GetArtistAndAlbums(artist)
 
-year = 1975
+year = 1974
 rt.GetRecordsByYear(year)
+
+# year = 1974
+# rt.GetRecordsByYear2(year)
+
 
 # rt.GetAllRecords()
 

@@ -32,34 +32,34 @@ def GetArtistAndAlbums(artistName: str):
             print(f"No albums found for {artistName}.")
 
 
-# def GetRecordsByYear(recordedYear: int):
-#     recordsByYear = r.GetRecordsByYear(recordedYear)
+def GetRecordsByYear2(recordedYear: int):
+    recordsByYear = r.GetRecordsByYear(recordedYear)
 
-#     artistRecordsDict = {}
+    artistRecordsDict = {}
 
-#     # Iterate through the records and group them by artist names
-#     for record in recordsByYear:
-#         artistid = record["artistid"]
-#         artistName = a.GetArtistName(artistid)
+    # Iterate through the records and group them by artist names
+    for record in recordsByYear:
+        artistid = record["artistid"]
+        artistName = a.GetArtistName(artistid)
 
-#         if artistName not in artistRecordsDict:
-#             artistRecordsDict[artistName] = []
+        if artistName not in artistRecordsDict:
+            artistRecordsDict[artistName] = []
 
-#         artistRecordsDict[artistName].append(
-#             {"name": record["name"], "media": record["media"]}
-#         )
+        artistRecordsDict[artistName].append(
+            {"name": record["name"], "media": record["media"]}
+        )
 
-#     print(f"\nArtists with albums recorded in {recordedYear}:\n")
+    print(f"\nArtists with albums recorded in {recordedYear}:\n")
 
-#     for artistName in artistRecordsDict:
-#         print(f"\n\t{artistName}:")
-#         artistRecords = artistRecordsDict[artistName]
+    for artistName in artistRecordsDict:
+        print(f"\n\t{artistName}:")
+        artistRecords = artistRecordsDict[artistName]
 
-#         if artistRecords:
-#             for record in artistRecords:
-#                 print(f"\t\t{record['name']} ({record['media']})")
+        if artistRecords:
+            for record in artistRecords:
+                print(f"\t\t{record['name']} ({record['media']})")
 
-#     print()
+    print()
 
 
 def GetAllArtistsAndAlbums():
