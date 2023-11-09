@@ -242,3 +242,20 @@ def GetMongoId(artistid):
         print(f"An error occurred: {e}")
 
     return mongoId
+
+
+def GetArtistByPartialName(query: str):
+    artists = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        condition = query
+        artists = db["artists"].find(
+            condition,
+        )
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return artists

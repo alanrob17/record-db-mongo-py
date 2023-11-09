@@ -33,6 +33,10 @@ import record_test as rt
 
 # at.GetNoBiographyCount()
 
+name = "allman"
+at.GetArtistByPartialName(name)
+
+
 # -- Record Methods --
 
 # rt.GetAllArtistsAndAlbums()
@@ -60,8 +64,8 @@ import record_test as rt
 # recordid = 5251
 # rt.GetRecordById(recordid)
 
-name = "blonde"
-rt.GetRecordByName(name)
+# name = "blonde"
+# rt.GetRecordByName(name)
 
 # rt.GetRecordsByArtistId(114)
 

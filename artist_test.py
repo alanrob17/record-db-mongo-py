@@ -132,3 +132,17 @@ def GetNoBiographyCount():
 
     if count:
         print(f"The number of Artists that have no Biography: {count}")
+
+
+def GetArtistByPartialName(name):
+    query = {"name": {"$regex": f".*{name}.*", "$options": "i"}}
+
+    artists = a.GetArtistByPartialName(query)
+
+    for artist in artists:
+        biography = artist["biography"]
+        abbreviatedBio = biography if len(biography) < 60 else biography[:60] + "..."
+
+        print(
+            f"Id: {artist['artistid']} - {artist['firstname']} - {artist['lastname']} - {artist['name']})\n\t{abbreviatedBio}"
+        )
