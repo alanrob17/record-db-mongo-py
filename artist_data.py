@@ -6,7 +6,8 @@ def GetNewArtistId(artistIdList: list) -> int:
     return artistid
 
 
-def CreateDictionaryList(artists: list[dict[str, str]]) -> list[dict[str, str]]:
+## ArtistList in memory - you wouldn't use this for a huge list of documents.
+def CreateDictionaryList(artists: list[dict]) -> list[dict]:
     artistList = []
     for artist in artists:
         artistList.append(artist)
@@ -16,12 +17,12 @@ def CreateDictionaryList(artists: list[dict[str, str]]) -> list[dict[str, str]]:
 
 def GetArtistIds(records):
     # Create a set to store distinct artist_ids
-    artist_ids = set()
+    artistIds = set()
 
     for record in records:
-        artist_ids.add(record["artistid"])
+        artistIds.add(record["artistid"])
 
     # Convert the set to a list if needed
-    artist_ids_list = list(artist_ids)
+    artistIdsList = list(artistIds)
 
-    return artist_ids_list
+    return artistIdsList

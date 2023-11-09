@@ -227,3 +227,18 @@ def GetArtistName(artistid: str) -> str:
         print(f"An error occurred: {e}")
 
     return artistName
+
+
+def GetMongoId(artistid):
+    mongoId = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        artist = db["artists"].find_one({"artistid": artistid})
+        mongoId = artist["_id"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return mongoId

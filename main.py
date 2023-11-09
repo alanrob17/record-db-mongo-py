@@ -40,24 +40,28 @@ import record_test as rt
 # artist = "Bob Dylan"
 # rt.GetArtistAndAlbums(artist)
 
-year = 1974
-rt.GetRecordsByYear(year)
+# year = 1974
+# rt.GetRecordsByYear(year)
 
 # year = 1974
 # rt.GetRecordsByYear2(year)
 
-
 # rt.GetAllRecords()
 
-# rt.CreateRecord(838)
+# artistid = 823
+# rt.CreateRecord(artistid)
 
-# rt.GetRecordById(133)
+# recordid = 5251
+# rt.UpdateRecord(recordid)
 
-# rt.UpdateRecord(5259)
+# recordid = 5251
+# rt.DeleteRecord(recordid)
 
-# rt.DeleteRecord(5260)
+# recordid = 5251
+# rt.GetRecordById(recordid)
 
-# rt.GetRecordByName("Cutting Edge")
+name = "blonde"
+rt.GetRecordByName(name)
 
 # rt.GetRecordsByArtistId(114)
 
