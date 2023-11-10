@@ -33,8 +33,8 @@ import record_test as rt
 
 # at.GetNoBiographyCount()
 
-name = "allman"
-at.GetArtistByPartialName(name)
+# name = "allman"
+# at.GetArtistByPartialName(name)
 
 
 # -- Record Methods --
@@ -61,38 +61,36 @@ at.GetArtistByPartialName(name)
 # recordid = 5251
 # rt.DeleteRecord(recordid)
 
-# recordid = 5251
+# recordid = 5250
 # rt.GetRecordById(recordid)
 
 # name = "blonde"
 # rt.GetRecordByName(name)
 
-# rt.GetRecordsByArtistId(114)
-
+# artistid = 114
+# rt.GetRecordsByArtistId(artistid)
 
 # rt.GetTotalNumberOfCDs()
 
-# rt.GetTotalNumberOfDiscs()
+# rt.GetTotalNumberOfCdDvds()
+
+# rt.GetTotalNumberOfCdBlurays()
 
 # rt.GetTotalNumberOfRecords()
 
+# rt.GetTotalNumberOfDVDs()
+
 # rt.GetTotalNumberOfBlurays()
 
-# rt.GetRecordList()
+# rt.GetTotalNumberOfDiscs()
 
-# rt.GetRecordListMultipleTables()
+# artistid = 114
+# rt.GetArtistNumberOfRecords(artistid)
 
-# rt.CountDiscs(string.Empty)
-
-# rt.CountDiscs("DVD")
-
-# rt.CountDiscs("CD")
-
-# rt.CountDiscs("R")
+rt.GetRecordList()
 
 # rt.GetArtistRecordEntity(2196)
 
-# rt.GetArtistNumberOfRecords(114)
 
 # rt.GetRecordDetails(2196)
 

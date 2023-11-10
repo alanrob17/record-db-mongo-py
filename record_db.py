@@ -178,3 +178,246 @@ def GetRecordsByName(query):
         print(f"An error occurred: {e}")
 
     return records
+
+
+def GetTotalNumberOfCDs():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "media": "CD",
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetTotalNumberOfCdDvds():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "media": "CD/DVD",
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetTotalNumberIfCdBlurays():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "media": "CD/Blu-ray",
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetTotalNumberOfRecords():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "media": "R",
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetTotalNumberOfDVDs():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "media": "DVD",
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetTotalNumberOfBlurays():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "media": "Blu-ray",
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetTotalNumberOfDiscs():
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetArtistNumberOfRecords(artistid):
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "artistid": artistid,
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total

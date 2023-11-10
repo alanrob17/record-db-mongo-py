@@ -227,3 +227,78 @@ def GetRecordByName(name):
         print(
             f"Id: {record['recordid']} - {record['recorded']} - {record['name']} ({record['media']}) - Bought: {record['bought']} - Cost: {record['cost']}"
         )
+
+
+def GetRecordsByArtistId(artistid: int):
+    artist = a.GetArtistById(artistid)
+
+    if artist:
+        biography = artist["biography"]
+        bio = biography if len(biography) < 60 else biography[:60] + "..."
+
+        print(
+            f"{artist['artistid']}: {artist['firstname']} - {artist['lastname']} - {artist['name']}\n\t{bio}"
+        )
+    else:
+        print(f"No Artist with Id: {artistid} found!")
+        return
+
+    records = r.GetAllRecordsByArtist(artistid)
+
+    if records:
+        for record in records:
+            review = record["review"]
+            abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+
+            print(
+                f"(Id: {record['recordid']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {record['bought']} - Cost: {record['cost']}\n\t{abbreviatedReview}"
+            )
+
+
+def GetTotalNumberOfCDs():
+    total = r.GetTotalNumberOfCDs()
+
+    print(f"Total number of CD discs: {total}.")
+
+
+def GetTotalNumberOfCdDvds():
+    total = r.GetTotalNumberOfCdDvds()
+
+    print(f"Total number of CD/DVD disc sets: {total}.")
+
+
+def GetTotalNumberOfCdBlurays():
+    total = r.GetTotalNumberIfCdBlurays()
+
+    print(f"Total number of CD/Blu-ray disc sets: {total}.")
+
+
+def GetTotalNumberOfRecords():
+    total = r.GetTotalNumberOfRecords()
+
+    print(f"Total number of vinyl Records: {total}.")
+
+
+def GetTotalNumberOfDVDs():
+    total = r.GetTotalNumberOfDVDs()
+
+    print(f"Total number of DVD's: {total}.")
+
+
+def GetTotalNumberOfBlurays():
+    total = r.GetTotalNumberOfBlurays()
+
+    print(f"Total number of Blu-rays: {total}.")
+
+
+def GetTotalNumberOfDiscs():
+    total = r.GetTotalNumberOfDiscs()
+
+    print(f"Total number of All discs: {total}.")
+
+
+def GetArtistNumberOfRecords(artistid):
+    artist = a.GetArtistById(artistid)
+    total = r.GetArtistNumberOfRecords(artistid)
+
+    print(f"Total number of {artist['name']} discs: {total}.")
