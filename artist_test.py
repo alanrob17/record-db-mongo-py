@@ -1,6 +1,5 @@
 import artist_db as a
 import artist_data as ad
-import pandas as pd
 
 
 def GetAllArtists():

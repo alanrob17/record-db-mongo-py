@@ -87,25 +87,38 @@ import record_test as rt
 # artistid = 114
 # rt.GetArtistNumberOfRecords(artistid)
 
-rt.GetRecordList()
+# rt.GetRecordList()
 
-# rt.GetArtistRecordEntity(2196)
+## I have built this previously but in this version
+## I need to be able to join two tables together in a query.
+## Work on how to do this in Python.
+# recordid = 2196
+# rt.GetArtistRecordEntities(recordid)
 
+# recordid = 2196
+# rt.GetRecordDetails(recordid)
 
-# rt.GetRecordDetails(2196)
+# recordid = 2196
+# rt.GetArtistNameFromRecord(recordid)
 
-# rt.GetArtistNameFromRecord(2196)
+# year = 1971
+# rt.GetDiscCountForYear(year)
 
-# rt.GetDiscCountForYear(1974)
+## This run to update Cost and Bought fields
+## *** Don't run again! ***
+# rt.UpdateCostAndBoughtDates()
 
-# rt.GetBoughtDiscCountForYear("2000")
+# year = 2000
+# rt.GetBoughtDiscCountForYear(year)
 
 # rt.GetNoRecordReview()
 
 # rt.GetNoReviewCount()
 
-# rt.GetTotalArtistCost()
+# artistid = 114
+# rt.GetTotalArtistCostById(artistid)
 
-# rt.GetTotalArtistDiscs()
+rt.GetTotalArtistCost()
 
-# rt.RecordHtml(2196)
+# recordid = 2196
+# rt.RecordHtml(recordid)

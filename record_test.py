@@ -4,6 +4,7 @@ import artist_db as a
 import artist_data as ad
 import record_db as r
 import record_data as rd
+import utilities as u
 
 
 def GetArtistAndAlbums(artistName: str):
@@ -302,3 +303,114 @@ def GetArtistNumberOfRecords(artistid):
     total = r.GetArtistNumberOfRecords(artistid)
 
     print(f"Total number of {artist['name']} discs: {total}.")
+
+
+def GetRecordDetails(recordid):
+    record = r.GetRecordById(recordid)
+
+    if record:
+        review = record["review"]
+        abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+
+        print(
+            f"(Id: {record['recordid']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {record['bought']} - Cost: {record['cost']}\n\t{abbreviatedReview}"
+        )
+
+
+def GetArtistNameFromRecord(recordid):
+    record = r.GetRecordById(recordid)
+
+    if record:
+        artistid = record["artistid"]
+    else:
+        print(f"Artists with Id: {artistid} not found!")
+        return
+
+    artist = a.GetArtistById(artistid)
+
+    if artist:
+        print(f"Artist name: {artist['name']}.")
+    else:
+        print(f"Artist name with Id: {artistid} not found!")
+
+
+def GetDiscCountForYear(year):
+    count = r.GetDiscCountForYear(year)
+
+    if count:
+        print(f"Disc count for {year} = {count}.")
+
+
+def UpdateCostAndBoughtDates():
+    records = r.GetAllRecords("recorded")
+
+    for record in records:
+        date = rd.ChangeDate(record["bought"])
+
+        stringCost = record["cost"]
+        stringCost = stringCost.strip("$")
+        cost = round(float(stringCost), 2)
+
+        query = {"recordid": record["recordid"]}
+        newValues = {"$set": {"bought": date, "cost": cost}}
+        affected = r.UpdateRecord(query, newValues)
+        print(f"Documents updated: {affected}.")
+
+
+def GetBoughtDiscCountForYear(year):
+    count = r.GetBoughtDiscCountForYear(year)
+    if count:
+        print(f"Number of Albums bought in {year} is {count}.")
+
+
+def GetNoRecordReview():
+    records = r.GetNoRecordReview()
+
+    for record in records:
+        print(
+            f"Id: {record['artistid']} -- {record['recorded']} - {record['name']} ({record['media']})"
+        )
+
+
+def GetNoReviewCount():
+    count = r.GetNoReviewCount()
+    if count:
+        print(f"Number of Albums with no reviews is {count}.")
+
+
+def GetTotalArtistCostById(artistid):
+    artist = a.GetArtistById(artistid)
+
+    if artist:
+        print(f"{artist['name']}:")
+        totalCost = r.GetTotalArtistCostById(artistid)
+        if totalCost:
+            print(f"\tI spent ${totalCost} on {artist['name']} albums.")
+    else:
+        print(f"Id: {artist['artistid']} not found!")
+
+
+def RecordHtml(recordid):
+    record = r.GetRecordById(recordid)
+
+    if record:
+        artist = a.GetArtistById(record["artistid"])
+        print(
+            f"<p><strong>ArtistId:</strong> {record['artistid']}</p>\n<p><strong>Artist:</strong> {artist['name']}</p>\n<p><strong>RecordId:</strong> {record['recordid']}</p>\n<p><strong>Recorded:</strong> {record['recorded']}</p>\n<p><strong>Name:</strong> {record['name']}</p>\n<p><strong>Rating:</strong> {record['rating']}</p>\n<p><strong>Media:</strong> {record['media']}</p>\n"
+        )
+
+
+def GetTotalArtistCost():
+    results = r.GetTotalArtistCost()
+    artists = a.GetAllArtists()
+    artistList = ad.CreateDictionaryList(artists)
+
+    for artist in results:
+        for ar in artistList:
+            if ar["artistid"] == artist["ArtistId"]:
+                newArtist = ar
+                continue
+
+        print(
+            f"{newArtist['name']}, discs: {artist['TotalDiscs']}, cost: ${'{:.2f}'.format(artist['TotalCost'])}"
+        )
