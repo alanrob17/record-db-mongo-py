@@ -632,6 +632,37 @@ def GetTotalArtistCostById(artistid: int) -> float:
     return totalCost
 
 
+def GetTotalArtistCostByObjectId(objInstance: ObjectId) -> float:
+    totalCost = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "artist": objInstance,
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalCost": {"$sum": "$cost"},  # Sum the 'cost' field
+                },
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            totalCost = result[0]["totalCost"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return totalCost
+
+
 def GetTotalArtistCost():
     try:
         client = MC(MONGODB_CONNECTION_STRING)

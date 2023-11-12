@@ -375,6 +375,21 @@ def GetRecordDetails(recordid):
         )
 
 
+def GetRecordDetailsByObjectId(id: str):
+    objInstance = ObjectId(id)
+    record = r.GetRecordByObjectId(objInstance)
+
+    if record:
+        review = record["review"]
+        abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+        stringDate = rd.formatDateString(record["bought"])
+        cost = "{:.2f}".format(record["cost"])
+
+        print(
+            f"(Id: {record['_id']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {stringDate} - Cost: ${cost}\n\t{abbreviatedReview}"
+        )
+
+
 def GetArtistNameFromRecord(recordid):
     record = r.GetRecordById(recordid)
 
@@ -390,6 +405,31 @@ def GetArtistNameFromRecord(recordid):
         print(f"Artist name: {artist['name']}.")
     else:
         print(f"Artist name with Id: {artistid} not found!")
+
+
+def GetArtistNameFromRecordByObjectId(rid: str):
+    try:
+        objInstance = ObjectId(rid)
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return
+
+    record = r.GetRecordByObjectId(objInstance)
+
+    if record:
+        aid = record["artist"]
+    else:
+        print(f"Artist with Id: {objInstance} not found!")
+        return
+
+    objInstance = ObjectId(aid)
+    artist = a.GetArtistByObjectId(objInstance)
+
+    if artist:
+        print(f"Artist name: {artist['name']}.")
+    else:
+        print(f"Artist name with Id: {objInstance} not found!")
 
 
 def GetDiscCountForYear(year):
@@ -448,6 +488,21 @@ def GetTotalArtistCostById(artistid):
         print(f"Id: {artist['artistid']} not found!")
 
 
+def GetTotalArtistCostByObjectId(aid):
+    objInstance = ObjectId(aid)
+    artist = a.GetArtistByObjectId(objInstance)
+
+    if artist:
+        print(f"{artist['name']}:")
+        totalCost = r.GetTotalArtistCostByObjectId(objInstance)
+        if totalCost:
+            print(
+                f"\tI spent ${'{:.2f}'.format(totalCost)} on {artist['name']} albums."
+            )
+    else:
+        print(f"Id: {objInstance} not found!")
+
+
 def RecordHtml(recordid):
     record = r.GetRecordById(recordid)
 
@@ -455,6 +510,19 @@ def RecordHtml(recordid):
         artist = a.GetArtistById(record["artistid"])
         print(
             f"<p><strong>ArtistId:</strong> {record['artistid']}</p>\n<p><strong>Artist:</strong> {artist['name']}</p>\n<p><strong>RecordId:</strong> {record['recordid']}</p>\n<p><strong>Recorded:</strong> {record['recorded']}</p>\n<p><strong>Name:</strong> {record['name']}</p>\n<p><strong>Rating:</strong> {record['rating']}</p>\n<p><strong>Media:</strong> {record['media']}</p>\n"
+        )
+
+
+def RecordHtmlByObjectId(id):
+    objInstance = ObjectId(id)
+    rid = objInstance
+    record = r.GetRecordByObjectId(objInstance)
+
+    if record:
+        objInstance = ObjectId(record["artist"])
+        artist = a.GetArtistByObjectId(objInstance)
+        print(
+            f"<p><strong>ArtistId:</strong> {objInstance}</p>\n<p><strong>Artist:</strong> {artist['name']}</p>\n<p><strong>RecordId:</strong> {rid}</p>\n<p><strong>Recorded:</strong> {record['recorded']}</p>\n<p><strong>Name:</strong> {record['name']}</p>\n<p><strong>Rating:</strong> {record['rating']}</p>\n<p><strong>Media:</strong> {record['media']}</p>\n"
         )
 
 

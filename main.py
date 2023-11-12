@@ -116,16 +116,20 @@ import record_test as rt
 # recordid = 2196
 # rt.GetRecordDetails(recordid)
 
-id = ""
-rt.GetRecordDetails(id)
+# id = "63244f4f4cb06d41904c2863"
+# rt.GetRecordDetailsByObjectId(id)
 
 # recordid = 2196
 # rt.GetArtistNameFromRecord(recordid)
 
+# id = "63244f4f4cb06d41904c2865"
+# rt.GetArtistNameFromRecordByObjectId(id)
+
+
 # year = 1971
 # rt.GetDiscCountForYear(year)
 
-## This run to update Cost and Bought fields
+## This runs to update Cost and Bought fields
 ## *** Don't run again! ***
 # rt.UpdateCostAndBoughtDates()
 
@@ -139,7 +143,13 @@ rt.GetRecordDetails(id)
 # artistid = 114
 # rt.GetTotalArtistCostById(artistid)
 
+# aid = "6324401d9926786e6c05479e"
+# rt.GetTotalArtistCostByObjectId(aid)
+
 # rt.GetTotalArtistCost()
 
 # recordid = 2196
 # rt.RecordHtml(recordid)
+
+id = "63244f4f4cb06d41904c2865"
+rt.RecordHtmlByObjectId(id)
