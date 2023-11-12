@@ -1,5 +1,6 @@
 import artist_db as a
 import artist_data as ad
+from bson.objectid import ObjectId
 
 
 def GetAllArtists():
@@ -94,8 +95,22 @@ def GetArtistById(artistid: int):
         )
 
 
-def GetBiography(artistid: int):
-    biography = a.GetBiography(artistid)
+def GetArtistByObjectId(id: str):
+    objInstance = ObjectId(id)
+    artist = a.GetArtistByObjectId(objInstance)
+
+    if artist:
+        biography = artist["biography"]
+        bio = biography if len(biography) < 60 else biography[:60] + "..."
+
+        print(
+            f"{artist['artistid']}: {artist['firstname']} - {artist['lastname']} - {artist['name']}\n\t{bio}"
+        )
+
+
+def GetBiographyByObjectId(id: str):
+    objInstance = ObjectId(id)
+    biography = a.GetBiographyByObjectId(objInstance)
 
     if biography:
         print(biography)
@@ -103,6 +118,18 @@ def GetBiography(artistid: int):
 
 def ArtistHtml(artistid: int):
     artist = a.GetArtistById(artistid)
+
+    if artist:
+        biography = artist["biography"]
+        bio = biography if len(biography) < 60 else biography[:60] + "..."
+        htmlCode = f"<p><strong>Id:</strong> {artist['artistid']}</p>\n<p><strong>Name:</strong> {artist['firstname']} {artist['lastname']}</p>\n<p><strong>Biography:</strong></p>\n<div>{artist['biography']}</p></div>"
+
+        print(htmlCode)
+
+
+def ArtistHtmlByObjectId(id: str):
+    objInstance = ObjectId(id)
+    artist = a.GetArtistByObjectId(objInstance)
 
     if artist:
         biography = artist["biography"]

@@ -1,5 +1,6 @@
 from pymongo import MongoClient as MC, ASCENDING, DESCENDING
 from config import MONGODB_CONNECTION_STRING, DATABASE_NAME
+from bson.objectid import ObjectId
 from datetime import datetime
 
 
@@ -27,6 +28,22 @@ def GetAllRecordsByArtist(artistid: int):
         db = client[DATABASE_NAME]
 
         records = db["records"].find({"artistid": artistid})
+        records = records.sort([("recorded", ASCENDING)])
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return records
+
+
+def GetAllRecordsByArtistObjectId(objInstance: ObjectId) -> list:
+    records = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        records = db["records"].find({"artist": objInstance})
         records = records.sort([("recorded", ASCENDING)])
 
     except Exception as e:
@@ -95,7 +112,7 @@ def AddNewRecord(document):
     return _id.inserted_id
 
 
-def GetRecordById(recordid: int):
+def GetRecordById(recordid: int) -> tuple:
     record = None
 
     try:
@@ -103,6 +120,20 @@ def GetRecordById(recordid: int):
         db = client[DATABASE_NAME]
 
         record = db["records"].find_one({"recordid": recordid})
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return record
+
+
+def GetRecordByObjectId(objInstance: ObjectId) -> tuple:
+    record = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        record = db["records"].find_one({"_id": objInstance})
     except Exception as e:
         print(f"An error occurred: {e}")
 
@@ -404,6 +435,37 @@ def GetArtistNumberOfRecords(artistid):
             {
                 "$match": {
                     "artistid": artistid,
+                },
+            },
+            {
+                "$group": {
+                    "_id": None,  # Use None to group all matching records together
+                    "totalDiscs": {"$sum": "$discs"},  # Sum the 'discs' field
+                }
+            },
+        ]
+
+        result = list(db["records"].aggregate(pipeline))
+
+        if result:
+            total = result[0]["totalDiscs"]
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return total
+
+
+def GetArtistNumberOfRecordsByObjectId(objInstance: ObjectId) -> int:
+    total = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        pipeline = [
+            {
+                "$match": {
+                    "artist": objInstance,
                 },
             },
             {

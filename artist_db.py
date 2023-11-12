@@ -1,5 +1,6 @@
 from pymongo import MongoClient as MC, ASCENDING, DESCENDING
 from config import MONGODB_CONNECTION_STRING, DATABASE_NAME
+from bson.objectid import ObjectId
 
 
 def GetAllArtists():
@@ -150,6 +151,21 @@ def GetArtistById(artistid: int) -> tuple:
     return artist
 
 
+def GetArtistByObjectId(objInstance: ObjectId) -> tuple:
+    artist = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        artist = db["artists"].find_one({"_id": objInstance})
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return artist
+
+
 def GetBiography(artistid: int) -> str:
     biography = None
 
@@ -158,6 +174,22 @@ def GetBiography(artistid: int) -> str:
         db = client[DATABASE_NAME]
 
         artist = db["artists"].find_one({"artistid": artistid})
+        biography = artist["biography"]
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    return biography
+
+
+def GetBiographyByObjectId(objInstance: ObjectId) -> str:
+    biography = None
+
+    try:
+        client = MC(MONGODB_CONNECTION_STRING)
+        db = client[DATABASE_NAME]
+
+        artist = db["artists"].find_one({"_id": objInstance})
         biography = artist["biography"]
 
     except Exception as e:

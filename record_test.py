@@ -1,5 +1,6 @@
 from pymongo import MongoClient as MC, ASCENDING
 from config import MONGODB_CONNECTION_STRING, DATABASE_NAME
+from bson.objectid import ObjectId
 import artist_db as a
 import artist_data as ad
 import record_db as r
@@ -211,6 +212,19 @@ def GetRecordById(recordid):
         )
 
 
+def GetRecordByObjectId(id: str):
+    objInstance = ObjectId(id)
+    record = r.GetRecordByObjectId(objInstance)
+
+    if record:
+        review = record["review"]
+        abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+
+        print(
+            f"{record['_id']}: {record['recorded']} - {record['name']} ({record['media']})\n\t{abbreviatedReview}"
+        )
+
+
 def DeleteRecord(recordid: int) -> int:
     query = {"recordid": recordid}
 
@@ -261,6 +275,35 @@ def GetRecordsByArtistId(artistid: int):
             )
 
 
+def GetRecordsByArtistObjectId(id: str):
+    objInstance = ObjectId(id)
+    artist = a.GetArtistByObjectId(objInstance)
+
+    if artist:
+        biography = artist["biography"]
+        bio = biography if len(biography) < 60 else biography[:60] + "..."
+
+        print(
+            f"{artist['_id']}: {artist['firstname']} - {artist['lastname']} - {artist['name']}\n\t{bio}"
+        )
+    else:
+        print(f"No Artist with Id: {objInstance} found!")
+        return
+
+    records = r.GetAllRecordsByArtistObjectId(objInstance)
+
+    if records:
+        for record in records:
+            review = record["review"]
+            abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+            stringDate = rd.formatDateString(record["bought"])
+            cost = "{:.2f}".format(record["cost"])
+
+            print(
+                f"(Id: {record['_id']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {stringDate} - Cost: ${cost}\n\t{abbreviatedReview}"
+            )
+
+
 def GetTotalNumberOfCDs():
     total = r.GetTotalNumberOfCDs()
 
@@ -306,6 +349,14 @@ def GetTotalNumberOfDiscs():
 def GetArtistNumberOfRecords(artistid):
     artist = a.GetArtistById(artistid)
     total = r.GetArtistNumberOfRecords(artistid)
+
+    print(f"Total number of {artist['name']} discs: {total}.")
+
+
+def GetArtistNumberOfRecordsByObjectId(id):
+    objInstance = ObjectId(id)
+    artist = a.GetArtistByObjectId(objInstance)
+    total = r.GetArtistNumberOfRecordsByObjectId(objInstance)
 
     print(f"Total number of {artist['name']} discs: {total}.")
 

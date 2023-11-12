@@ -19,11 +19,20 @@ import record_test as rt
 # artistid = 114
 # at.GetArtistById(artistid)
 
+# id = "6324401d9926786e6c054736"
+# at.GetArtistByObjectId(id)
+
 # artistid = 114
 # at.GetBiography(artistid)
 
+# id = "6324401d9926786e6c05479e"
+# at.GetBiographyByObjectId(id)
+
 # artistid = 114
 # at.ArtistHtml(artistid)
+
+# id = "6324401d9926786e6c05479e"
+# at.ArtistHtmlByObjectId(id)
 
 # firstName = "Bob"
 # lastName = "Dylan"
@@ -64,11 +73,17 @@ import record_test as rt
 # recordid = 5250
 # rt.GetRecordById(recordid)
 
+# id = "63244f4f4cb06d41904c2863"
+# rt.GetRecordByObjectId(id)
+
 # name = "blonde"
 # rt.GetRecordByName(name)
 
 # artistid = 114
 # rt.GetRecordsByArtistId(artistid)
+
+# id = "6324401d9926786e6c05479e"
+# rt.GetRecordsByArtistObjectId(id)
 
 # rt.GetTotalNumberOfCDs()
 
@@ -87,6 +102,9 @@ import record_test as rt
 # artistid = 114
 # rt.GetArtistNumberOfRecords(artistid)
 
+# id = "6324401d9926786e6c05479e"
+# rt.GetArtistNumberOfRecordsByObjectId(id)
+
 # rt.GetRecordList()
 
 ## I have built this previously but in this version
@@ -95,8 +113,11 @@ import record_test as rt
 # recordid = 2196
 # rt.GetArtistRecordEntities(recordid)
 
-recordid = 2196
-rt.GetRecordDetails(recordid)
+# recordid = 2196
+# rt.GetRecordDetails(recordid)
+
+id = ""
+rt.GetRecordDetails(id)
 
 # recordid = 2196
 # rt.GetArtistNameFromRecord(recordid)
