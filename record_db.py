@@ -424,24 +424,6 @@ def GetArtistNumberOfRecords(artistid):
     return total
 
 
-def GetBoughtDates() -> list:
-    dates = []
-
-    try:
-        client = MC(MONGODB_CONNECTION_STRING)
-        db = client[DATABASE_NAME]
-
-        records = db["records"].find()
-
-        for record in records:
-            date = rd.ChangeDate(record["bought"])
-            dates.append()
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-    return dates
-
-
 def GetDiscCountForYear(year):
     total = None
 

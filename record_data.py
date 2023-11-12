@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 ## RecordList in memory - you wouldn't use this for a huge list of documents.
 def CreateDictionaryList(records: list[dict]) -> list[dict]:
     recordList = []
@@ -42,3 +45,17 @@ def ChangeDate(stringDate):
         date = f"{year}-{month}-{day} 12:00:00.000000"
 
     return date
+
+
+def formatDateString(stringDate: str) -> str:
+    stringDateTime = stringDate.split(" ")
+    stringDate = stringDateTime[0]
+    dateFormat = "%Y-%m-%d"
+    date = datetime.strptime(stringDate, dateFormat)
+    year = date.strftime("%Y")
+    fmtDate = date.strftime("%d %b %Y")
+
+    if year == "1900":
+        fmtDate = "unk"
+
+    return fmtDate

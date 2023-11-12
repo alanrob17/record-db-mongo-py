@@ -1,7 +1,7 @@
 import artist_test as at
 import record_test as rt
 
-# -- Artist Methods --
+## *** Artist Methods ***
 
 # at.GetAllArtists()
 
@@ -37,7 +37,7 @@ import record_test as rt
 # at.GetArtistByPartialName(name)
 
 
-# -- Record Methods --
+## *** Record Methods ***
 
 # rt.GetAllArtistsAndAlbums()
 
@@ -95,8 +95,8 @@ import record_test as rt
 # recordid = 2196
 # rt.GetArtistRecordEntities(recordid)
 
-# recordid = 2196
-# rt.GetRecordDetails(recordid)
+recordid = 2196
+rt.GetRecordDetails(recordid)
 
 # recordid = 2196
 # rt.GetArtistNameFromRecord(recordid)
@@ -118,7 +118,7 @@ import record_test as rt
 # artistid = 114
 # rt.GetTotalArtistCostById(artistid)
 
-rt.GetTotalArtistCost()
+# rt.GetTotalArtistCost()
 
 # recordid = 2196
 # rt.RecordHtml(recordid)

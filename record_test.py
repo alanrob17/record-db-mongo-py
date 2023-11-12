@@ -117,13 +117,13 @@ def GetAllRecords():
     records = r.GetAllRecords(sortField)
 
     for record in records:
-        stringDate = record["bought"]
-        cost = record["cost"]
+        stringDate = rd.formatDateString(record["bought"])
+        cost = "{:.2f}".format(record["cost"])
 
         print(
             f"{record['recordid']}: {record['artistid']}: - {record['name']} - \
 {record['field']} - {record['recorded']} - {record['label']} - {record['pressing']} - \
-{record['rating']} - {record['discs']} - {record['media']} - {stringDate} - {cost}."
+{record['rating']} - {record['discs']} - {record['media']} - {stringDate} - ${cost}."
         )
 
 
@@ -225,8 +225,11 @@ def GetRecordByName(name):
     records = r.GetRecordsByName(query)
 
     for record in records:
+        stringDate = rd.formatDateString(record["bought"])
+        cost = "{:.2f}".format(record["cost"])
+
         print(
-            f"Id: {record['recordid']} - {record['recorded']} - {record['name']} ({record['media']}) - Bought: {record['bought']} - Cost: {record['cost']}"
+            f"Id: {record['recordid']} - {record['recorded']} - {record['name']} ({record['media']}) - Bought: {stringDate} - Cost: ${cost}"
         )
 
 
@@ -250,9 +253,11 @@ def GetRecordsByArtistId(artistid: int):
         for record in records:
             review = record["review"]
             abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+            stringDate = rd.formatDateString(record["bought"])
+            cost = "{:.2f}".format(record["cost"])
 
             print(
-                f"(Id: {record['recordid']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {record['bought']} - Cost: {record['cost']}\n\t{abbreviatedReview}"
+                f"(Id: {record['recordid']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {stringDate} - Cost: ${cost}\n\t{abbreviatedReview}"
             )
 
 
@@ -311,9 +316,11 @@ def GetRecordDetails(recordid):
     if record:
         review = record["review"]
         abbreviatedReview = review if len(review) < 60 else review[:60] + "..."
+        stringDate = rd.formatDateString(record["bought"])
+        cost = "{:.2f}".format(record["cost"])
 
         print(
-            f"(Id: {record['recordid']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {record['bought']} - Cost: {record['cost']}\n\t{abbreviatedReview}"
+            f"(Id: {record['recordid']}): {record['recorded']} - {record['name']} ({record['media']}) - Bought: {stringDate} - Cost: ${cost}\n\t{abbreviatedReview}"
         )
 
 
