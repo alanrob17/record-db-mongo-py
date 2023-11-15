@@ -1,0 +1,615 @@
+Artist Name,Total Discs,Total Cost
+Bob Dylan,133,1218.00
+Bruce Springsteen,70,1050.00
+Various,225,997.89
+Neil Young,56,587.50
+Bruce Cockburn,32,535.99
+Eric Clapton,50,467.49
+Joe Bonamassa,17,338.00
+Miles Davis,65,319.49
+Jimi Hendrix,49,306.50
+Peter Gabriel,19,259.00
+Van Morrison,31,248.50
+Ry Cooder,25,214.49
+Dave Matthews Band,33,202.99
+Ben Harper,15,179.50
+Michael Brecker,10,164.00
+The Beatles,13,157.00
+Sting,22,151.00
+Cream,16,128.00
+Jeff Beck,14,119.50
+Stevie Ray Vaughan,10,118.50
+Pearl Jam,17,117.00
+Jackson Browne,19,111.50
+Branford Marsalis,10,108.00
+Robert Johnson,12,106.00
+U2,10,104.60
+John Williams,10,103.00
+Vika & Linda Bull,5,102.00
+John Mayer,9,96.00
+Crowded House,10,96.00
+Rory Gallagher,14,95.99
+Jan Garbarek,16,89.00
+Bonnie Raitt,9,84.00
+Midnight Oil,12,81.99
+John McLaughlin,13,81.00
+Gordon Lightfoot,12,79.95
+The Allman Brothers Band,12,79.00
+Traffic,9,76.00
+Little Feat,12,76.00
+James Taylor,11,75.99
+Derek & The Dominos,6,74.00
+Taj Mahal,9,73.00
+John Farnham,4,73.00
+Led Zeppelin,11,70.00
+Joni Mitchell,16,69.50
+Yes,19,66.00
+Lucinda Williams,8,65.00
+Billy Joel,5,64.00
+Jesse Winchester,7,63.50
+Howlin' Wolf,6,62.00
+Coldplay,8,60.00
+John Martyn,7,59.99
+Pat Metheny,9,58.00
+John Hiatt,8,57.50
+Ryan Adams,9,57.00
+Steve Winwood,8,56.00
+Talking Heads,5,56.00
+Eric Bogle,5,55.00
+Gary Moore,7,55.00
+Dire Straits,12,54.70
+Pink Floyd,7,54.00
+Spectrum,9,54.00
+Mark Gillespie,5,53.00
+Bert Jansch,13,53.00
+John Coltrane,10,53.00
+Mark Knopfler,12,52.00
+Leo Sayer,6,52.00
+Santana,9,52.00
+Bette Midler,3,50.00
+Charley Patton,6,49.50
+Leo Kottke,5,49.00
+Graham Parker,11,47.50
+Norman Blake,6,47.00
+Lyle Lovett,8,45.00
+Al Stewart,7,45.00
+Al Di Meola,10,45.00
+R.E.M.,5,45.00
+Emmylou Harris,7,43.00
+John Mayall,11,42.50
+The Who,9,42.00
+The Rolling Stones,12,41.00
+Richard Thompson,6,40.00
+Fleetwood Mac,4,40.00
+Jo Jo Zep & The Falcons,6,38.99
+William Ackerman,7,38.00
+"Di Meola, McLaughlin, De Lucia",5,38.00
+Red Hot Chili Peppers,6,36.00
+Blind Willie Johnson,3,35.00
+Pete Townshend,5,34.99
+K.D. Lang,2,34.99
+Stefan Grossman,8,34.50
+Jack Bruce,3,33.00
+Jerry Jeff Walker,4,33.00
+John Hammond,3,33.00
+Canned Heat,6,33.00
+Mississippi John Hurt,4,32.00
+Arlo Guthrie,4,31.00
+Joe Jackson,4,31.00
+John Prine,5,31.00
+Tori Amos,1,30.00
+The Nice,7,30.00
+Pepe Romero,5,30.00
+Jesse Colin Young,5,30.00
+Kate Cebrano,1,30.00
+Linda Ronstadt,4,30.00
+Paul Simon,5,29.99
+Broderick Smith,2,29.50
+Son House,4,29.00
+John Denver,4,29.00
+Ayers Rock,2,29.00
+Steely Dan,4,28.00
+Youngbloods,5,28.00
+Miroslav Vitous,2,28.00
+Manassas,4,28.00
+Robben Ford,3,27.00
+Bill Frisell,8,27.00
+Joe Walsh,5,27.00
+Dan Fogelberg,4,27.00
+Sonny Boy Williamson,5,27.00
+The Indelible Murtceps,1,27.00
+The Black Sorrows,3,26.00
+Little Village,1,26.00
+Iris DeMent,1,26.00
+Chain,3,26.00
+Mike McClellan,4,26.00
+The Animals,4,26.00
+Blind Faith,3,26.00
+Robbie Robertson,2,25.00
+Lloyd Spiegel,2,25.00
+Malcom Frager,1,25.00
+Don McLean,3,25.00
+Elvis Costello,6,24.50
+Mumford & Sons,1,24.00
+Dutch Tilders,3,24.00
+Herbie Hancock,4,24.00
+Lou Reed,4,24.00
+Fairport Convention,5,24.00
+Kenny G,1,24.00
+Tim Minchin,1,23.00
+Reverand Gary Davis,3,23.00
+Leonard Cohen,4,23.00
+The Doors,3,23.00
+"Beck, Bogart & Appice",2,22.00
+Roger Waters,4,21.00
+Ennio Morricone,4,20.50
+Johnny Cash,6,20.00
+Paul Kelly,11,20.00
+Michael Jackson,1,20.00
+Philippe Guidat,1,20.00
+Geoff Achison,1,20.00
+Glenn Gould,2,20.00
+Ed Kuepper,3,20.00
+Jacques Rouvier,2,20.00
+Leon Redbone,3,20.00
+Richie Havens,4,20.00
+Jethro Tull,3,20.00
+The Butterfield Blues Band,1,20.00
+Johnny Winter,9,19.00
+Martin Carthy,3,19.00
+Elmore James,11,19.00
+John Fahey,4,19.00
+Tom Rush,3,18.00
+Blind Lemon Jefferson,5,18.00
+Jeff Buckley,6,18.00
+Sonny Rollins,3,18.00
+J.J. Cale,3,18.00
+Shawn Colvin,2,18.00
+David Bromberg,3,18.00
+Richard Clapton,1,18.00
+Kenny Loggins,4,17.50
+Richard & Linda Thompson,3,17.50
+Little Walter,4,17.00
+Flying Burrito Brothers,4,17.00
+Stephen Stills,3,17.00
+Paula Cole,3,16.99
+Loggins And Messina,4,16.00
+Paul Siebel,3,16.00
+Sleepy John Estes,4,16.00
+Ariel,2,15.50
+Fredrick Handel,1,15.00
+Kieth Jarrett,7,15.00
+Ross Ryan,2,15.00
+The Finn Brothers,3,15.00
+Hunters And Collectors,3,15.00
+Elvis Presley,3,15.00
+Paul Grabowsky,1,15.00
+Loudon Wainwright,2,14.00
+Rick Wakeman,2,14.00
+Chris Whitley,1,14.00
+Otis Rush,2,14.00
+Stevie Wonder,5,14.00
+Jimmie Barnes,1,14.00
+Jaco Pastorius,1,14.00
+Steve Young,2,14.00
+Peter Green,1,14.00
+Nick Drake,2,14.00
+Zakir Hussain,1,14.00
+Roxy Music,3,14.00
+The Derek Trucks Band,1,13.00
+Herbert Von Karajan,2,13.00
+Billy Cobham,2,13.00
+Marcel Dadi,2,13.00
+Maria Muldaur,3,13.00
+Warren Zevon,3,13.00
+W.A. Mozart,2,13.00
+Buffalo Springfield,2,13.00
+J.S. Bach,5,13.00
+Lindisfarne,2,13.00
+Monty Python,5,13.00
+Muse,4,12.99
+Ellen McIlwaine,4,12.50
+Mark Isaacs,1,12.00
+Rodney Crowell,2,12.00
+Peter Frampton,2,12.00
+John Scofield,5,12.00
+Fletcher Henderson,1,12.00
+Skip James,1,12.00
+Bo Carter,2,12.00
+Pinchas Zuckerman,2,12.00
+Bukka White,2,11.50
+The Loved Ones,2,11.50
+Weather Report,2,11.00
+Frank Hutchinson,1,11.00
+The Eagles,2,11.00
+The Blues Brothers,1,11.00
+John Lennon,1,11.00
+Gram Parsons,2,11.00
+Freddie Hubbard,2,11.00
+Carole King,3,10.50
+Wynton Marsalis,1,10.00
+"Bruce, Baker, Moore",1,10.00
+Dream Theater,2,10.00
+The Pointer Sisters,2,10.00
+Peter Garrett,1,10.00
+Living Colour,1,10.00
+Kodaly Quartet,1,10.00
+Lisa Miller,1,10.00
+Jeno Jando,1,10.00
+Tab Benoit,2,10.00
+Courtney Pine,1,10.00
+Wilson Diesel,1,10.00
+Neville Brothers,1,10.00
+John Legend,2,10.00
+Bill Wyman,1,10.00
+Julie Driscoll,4,10.00
+Jimmie Rogers,1,10.00
+Paul Wookey,1,10.00
+Stanley Clarke,2,10.00
+Mary Chapin Carpenter,2,10.00
+Tim Hopkins,1,10.00
+Zwan,1,10.00
+The Smiths,1,10.00
+Kings Of Leon,2,10.00
+Lowell George,1,10.00
+Vienna Residence Orchestra,1,10.00
+David Bowie,5,9.50
+Rick Danko,2,9.00
+Terry Reid,2,9.00
+John Crowle,2,9.00
+Leadbelly,7,9.00
+Bryan Ferry,2,9.00
+Merle Travis,1,9.00
+Carlos Santana,2,9.00
+Chuck Berry,3,9.00
+B.B. King,3,9.00
+Australian Crawl,1,9.00
+Seals And Crofts,2,9.00
+David Grisman,1,9.00
+Steve Hoy,1,9.00
+Amazing Rhythm Aces,1,9.00
+Mike Seeger,1,9.00
+Southside Johnny,1,9.00
+Blondie Chaplin,1,9.00
+Magic Sam,1,9.00
+Neil Finn,3,9.00
+Northern Ballet Theatre Orchestra,1,9.00
+The Bushwackers Band,2,9.00
+Leo Wijnkamp,2,9.00
+Albert King,1,9.00
+Mance Lipscombe,1,9.00
+Rod Stewart,2,9.00
+Tim Weisberg,1,9.00
+John Fogerty,2,8.50
+The Yardbirds,4,8.50
+Leon Russell,1,8.00
+Greg Allman,2,8.00
+Heart,2,8.00
+Graham Lowndes,1,8.00
+Sir Neville Marriner,1,8.00
+Murray McLauchlan,4,8.00
+Blind Willie McTell,1,8.00
+Blind Boy Fuller,1,8.00
+The Kentucky Colonels,1,8.00
+Henry Thomas,1,8.00
+Paul Williams,1,8.00
+Dr Hook,1,8.00
+Stills-Young Band,1,8.00
+Little River Band,1,8.00
+Kate & Anna McGarrigle,1,8.00
+The Dingoes,2,8.00
+Mahavishnu Orchestra,5,8.00
+Boz Scaggs,3,8.00
+Ottmar Liebert,1,8.00
+Larry Johnson,1,8.00
+Frank Zappa,4,8.00
+Ten Years After,3,7.50
+Creedence Clearwater Revival,1,7.00
+Steeleye Span,1,7.00
+Eric Von Shmidt,2,7.00
+John Renbourne,3,7.00
+Neil Diamond,1,7.00
+Ludwig Von Beethoven,1,7.00
+Fredrick Chopin,1,7.00
+Grateful Dead,2,7.00
+Daniel Hope,1,7.00
+McGuinness Flint,1,7.00
+Jansch & Renbourne,1,7.00
+Mainline,1,7.00
+Antonio Vivaldi,2,7.00
+Home,1,7.00
+Ian Matthews,5,7.00
+Doug Sahm,1,7.00
+Galapagos Duck,1,7.00
+Matt Taylor,1,7.00
+Donovan,3,7.00
+Todd Rundgren,3,7.00
+Phil Collins,2,7.00
+Strange Creek Singers,1,7.00
+McKendree Spring,2,6.00
+Tony Joe White,1,6.00
+Kirk Lorange,1,6.00
+Chris Bailey,1,6.00
+Elton John,5,6.00
+Nitty Gritty Dirt Band,1,6.00
+CSN&Y,1,6.00
+Ralph McTell,2,6.00
+Tchaikovsky,2,5.50
+Robert Palmer,1,5.00
+Teddy Thompson,1,5.00
+Mike Stern,1,5.00
+Roberta Flack,1,5.00
+Don Dixon,1,5.00
+Joseph Haydn,1,5.00
+The Carter Family,1,5.00
+Earl Scruggs,1,5.00
+Tim Hardin,1,5.00
+"Bruford, Anderson, Howe, Wakeman",1,5.00
+Crystal Gayle,1,5.00
+Charlie Hunter Quartet,1,5.00
+Phil Manzanera,1,4.50
+Ramblin' Thomas,1,4.50
+Uncle Dave Macon,1,4.50
+Big Bill Broonzy,1,4.00
+Roy Hargrove,1,4.00
+Steve Morse,1,4.00
+Garry US Bonds,1,4.00
+Little Steven,1,4.00
+Hank Williams,1,4.00
+Jimmie Rodgers,1,4.00
+Linda Thompson,1,3.50
+Cisco Houston,3,3.50
+"Fahey, Kottke & Lang",1,3.00
+Paul Butterfield's Better Days,1,3.00
+Everything But The Girl,1,3.00
+Lightnin' Hopkins,2,3.00
+Reg Livermore,1,3.00
+Plainsong,1,3.00
+Happy & Artie Traum,1,3.00
+Hamilton County,1,3.00
+Sea Level,3,3.00
+Michael Hedges,4,3.00
+Levon Helm,1,3.00
+Greg Quill,1,3.00
+Robyn Archer,1,3.00
+Angelo Bandalamenti,1,3.00
+Gene Parsons,1,3.00
+Donald Fagen,1,3.00
+Eric Johnson,1,3.00
+Jeffrey Shurtleff,2,3.00
+Bob & Carol Pegg,1,3.00
+John Lee Hooker,2,2.50
+Men At Work,1,2.50
+Bill Evans,1,2.00
+Eduardo Mata,1,2.00
+Julian Bream,1,2.00
+Freddie King,1,2.00
+John Kane,1,2.00
+The Rowans,1,2.00
+Alex De Grassi,2,2.00
+Tears For Fears,2,2.00
+Stanley Jordon,1,2.00
+Wayne Perkins,1,2.00
+Larry Corryell,2,2.00
+Charlie Christian,1,2.00
+Dick Gaughan,1,2.00
+The Small Faces,2,2.00
+Paco De Lucia,1,2.00
+Joan Armatrading,1,2.00
+The Everly Brothers,1,2.00
+Johnny Rivers,1,2.00
+Jonitha Brooke,1,2.00
+Bola Sete,2,2.00
+Rocky Hill,1,2.00
+Eugene Ormandy,1,2.00
+The Larrikens,1,2.00
+Kerri Biddell,1,1.50
+Orleans,1,1.50
+Stephen Foster,1,1.50
+"Keorner, Ray And Glover",1,1.50
+Chet Atkins,1,1.20
+Renee Geyer,1,1.20
+Eikichi Yazawa,1,1.00
+Jane Oliver,1,1.00
+Rosemary Butler,1,1.00
+The Crusaders,1,1.00
+Lonnie Mack,1,1.00
+Mental As Anything,1,1.00
+Rusty Wier,1,1.00
+Starland Vocal Band,1,1.00
+Garland Jeffries,1,1.00
+Colin James,1,1.00
+Shakti,1,1.00
+Patrick Simmons,1,1.00
+Mark Almond,1,1.00
+Marc Bolin,1,1.00
+The Doobie Brothers,1,1.00
+Mike Rutherford,1,1.00
+Stein & Walder,1,1.00
+Snowy White,1,1.00
+Terry Garthwaite,1,1.00
+Brand X,1,1.00
+Bernie Taupin,1,1.00
+Nick Lowe,1,1.00
+Bob James,1,1.00
+Robert Fripp,1,1.00
+Inti Illimana,1,1.00
+Michael Omartian,1,1.00
+Martha's Vineyard,1,1.00
+Manning,1,1.00
+Greg Copeland,1,1.00
+Ric Ocasek,1,1.00
+Jim Messina,1,1.00
+Joe Sun,1,1.00
+Tom Tom Club,1,1.00
+Michael Murphey,1,1.00
+David Lindley,1,1.00
+Interviews,1,1.00
+Santana & McLaughlin,2,1.00
+George Cromarty,2,1.00
+Daniel,1,1.00
+Ian Tamblyn,1,1.00
+Matthews Southern Comfort,1,1.00
+Genesis,1,1.00
+Don Walker,1,1.00
+Liz Story,1,1.00
+Australian Youth Orchestra,1,1.00
+Vangelis,1,1.00
+Miklos Rozsa,1,1.00
+George Harrison,4,1.00
+Kiri Te Kanawa,1,1.00
+Venuti & Lang,1,1.00
+Pierre Bensusan,2,1.00
+Martin Stephenson,1,1.00
+David Sancious,1,1.00
+Jeremy Spencer Band,1,1.00
+Michael Chapman,1,1.00
+Mountain,1,1.00
+Tom Johnston,1,1.00
+Lenny Le Blanc,1,1.00
+Cate Brothers Band,1,1.00
+John Hartford,1,1.00
+Dave Edmunds,1,1.00
+Chris Hillman,1,1.00
+Willis Alan Ramsey,1,1.00
+Bonnie Koloc,1,1.00
+Eye To Eye,1,1.00
+Tuck & Patti,1,1.00
+Big Country,1,1.00
+Papa John Creach,1,1.00
+Walter Egan,1,1.00
+The Meters,1,1.00
+Livingston Taylor,1,1.00
+McGhee & Terry,1,1.00
+Jim Brewer,1,1.00
+Tom Petty,1,1.00
+Randy Newman,1,1.00
+Alberto Ponce,1,0.50
+Keith Sykes,1,0.50
+Woody Guthrie,1,0.50
+Al Farka Toure,1,0.00
+Michael Occhipinti,1,0.00
+David Gray,1,0.00
+The Smashing Pumpkins,4,0.00
+Mick Abrahams,1,0.00
+McCoy Tyner,1,0.00
+Gennadi Roshdestwensk,2,0.00
+Memphis Minnie,1,0.00
+Barefoot Servants,1,0.00
+Charlie Parker,1,0.00
+Murray Perahia,1,0.00
+Alex Lloyd,1,0.00
+Charles Lloyd,1,0.00
+Nigel Kennedy,2,0.00
+Big Mama Thornton,2,0.00
+Wilco,1,0.00
+Dave Liebman,1,0.00
+Battered Ornaments,1,0.00
+Duke Ellington,1,0.00
+Gillian Welch,3,0.00
+Roy Orbison,1,0.00
+The Blind Boys Of Alabama,1,0.00
+Sidney Bechet,1,0.00
+Sly And The Family Stone,1,0.00
+Andrew Manze,1,0.00
+Refugee,1,0.00
+Rob Thomas,1,0.00
+Anouar Brahem,4,0.00
+David Darling,1,0.00
+Joe Cocker,1,0.00
+Terje Rypdal,4,0.00
+James Muller,1,0.00
+Coleman Hawkins,1,0.00
+Kyung Wha-Chung,1,0.00
+Joshua Redman,3,0.00
+Nick Cave,1,0.00
+Ralph Stanley,1,0.00
+The Strokes,1,0.00
+Brad Mehldau,1,0.00
+Tangerene Dream,1,0.00
+Dr John,2,0.00
+Ralph Towner,3,0.00
+P.P. Arnold,1,0.00
+Johnny Jenkins,1,0.00
+Manfred Mann's Earth Band,1,0.00
+Spyro Gyra,2,0.00
+Roy Buchanan,1,0.00
+Sherbet,1,0.00
+John Butler Trio,1,0.00
+"Emerson, Lake & Palmer",1,0.00
+Tommy Guerrero,1,0.00
+The Bee Gees,1,0.00
+Leroy Carr,1,0.00
+Eberhard Weber,1,0.00
+Les McCann,2,0.00
+Pablo Casals,1,0.00
+Clark Hutchinson,1,0.00
+Doves,1,0.00
+You Am I,2,0.00
+Tom Waits,6,0.00
+Return To Forever,1,0.00
+Queens Of The Stone Age,1,0.00
+Alison Krauss,1,0.00
+Michael Nyman,1,0.00
+Dog Soldier,1,0.00
+Don Henley,1,0.00
+Ron Sexsmith,1,0.00
+Larry Carlton,1,0.00
+Victor Villadangos,1,0.00
+Julia Fischer,2,0.00
+Jet,1,0.00
+Bob Marley,1,0.00
+Nusrat Fateh Ali Khan,1,0.00
+Wayne Shorter,2,0.00
+Angelique Kidjo,1,0.00
+Elliot Smith,1,0.00
+Jack Johnson,1,0.00
+Rory Block,1,0.00
+Ray Charles,1,0.00
+Bobby McFerrin,1,0.00
+Spooky Tooth,1,0.00
+Memphis Slim,1,0.00
+Nirvana,2,0.00
+Juicy Lucy,1,0.00
+The Groundhogs,1,0.00
+Radiohead,2,0.00
+Mingus And Taylor,1,0.00
+Christopher Parkening,1,0.00
+Mark Seymour,1,0.00
+Tommy Bolin,1,0.00
+Igor Stravinsky,6,0.00
+Live,1,0.00
+Cowboy,2,0.00
+Tomasz Stanko Quartet,4,0.00
+Billy Bragg,1,0.00
+James Brown,1,0.00
+Alex Wurman,1,0.00
+Duane Allman,2,0.00
+Emil Giles,1,0.00
+Marie Boine,1,0.00
+Thelonius Monk,6,0.00
+Emerson String Quartet,1,0.00
+Buddy Guy,3,0.00
+Solomon Burke,1,0.00
+Stephen Cummings,2,0.00
+The Kinks,12,0.00
+David Gilmour,3,0.00
+Split Enz,2,0.00
+Willie Dixon,1,0.00
+Yehudi Menuhin,1,0.00
+Deadman,1,0.00
+Mahlathini And The Mahotella Queens,1,0.00
+Rage Against The Machine,2,0.00
+Shure,1,0.00
+Gheorge Zamfir,2,0.00
+Slava Grigoryan,1,0.00
+Trevor Pinnock,3,0.00
+The Pretenders,1,0.00
+The Vines,1,0.00
+Jelly Roll Morton,1,0.00
+The Gadflys,1,0.00
+Sharon Ibsin,1,0.00
+Ani Di Franco,1,0.00
+St Germain,1,0.00
+Yundi Li,1,0.00
+Toots Thielemans,1,0.00

@@ -6,6 +6,8 @@ import artist_data as ad
 import record_db as r
 import record_data as rd
 import utilities as u
+import pandas as pd
+import csv
 
 
 def GetArtistAndAlbums(artistName: str):
@@ -540,3 +542,36 @@ def GetTotalArtistCost():
         print(
             f"{newArtist['name']}, discs: {artist['TotalDiscs']}, cost: ${'{:.2f}'.format(artist['TotalCost'])}"
         )
+
+
+def WriteResultsToCsv():
+    outputFile = "output.csv"
+    results = r.GetTotalArtistCost()
+    artists = a.GetAllArtists()
+    artistList = ad.CreateDictionaryList(artists)
+
+    with open(outputFile, "w", newline="", encoding="utf-8") as csvFile:
+        fieldnames = ["Artist Name", "Total Discs", "Total Cost"]
+        writer = csv.DictWriter(csvFile, fieldnames=fieldnames)
+
+        writer.writeheader()
+
+        for artist in results:
+            for ar in artistList:
+                if ar["artistid"] == artist["ArtistId"]:
+                    newArtist = ar
+                    continue
+
+            writer.writerow(
+                {
+                    "Artist Name": newArtist["name"],
+                    "Total Discs": artist["TotalDiscs"],
+                    "Total Cost": "{:.2f}".format(artist["TotalCost"]),
+                }
+            )
+
+
+def ReadCsv():
+    df = pd.read_csv("output.csv")
+
+    print(df.to_string())

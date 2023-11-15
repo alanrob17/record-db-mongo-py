@@ -146,10 +146,14 @@ import record_test as rt
 # aid = "6324401d9926786e6c05479e"
 # rt.GetTotalArtistCostByObjectId(aid)
 
-# rt.GetTotalArtistCost()
+rt.GetTotalArtistCost()
+
+# rt.WriteResultsToCsv()
+
+# rt.ReadCsv()
 
 # recordid = 2196
 # rt.RecordHtml(recordid)
 
-id = "63244f4f4cb06d41904c2865"
-rt.RecordHtmlByObjectId(id)
+# id = "63244f4f4cb06d41904c2865"
+# rt.RecordHtmlByObjectId(id)
